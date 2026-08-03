@@ -1,0 +1,284 @@
+
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VeloQuest</title>
+    <meta name="description" content="Iedere rit vergroot jouw wereld.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link
+rel="stylesheet"
+href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+</head>
+<body>
+<!-- ========================= -->
+<!-- NAVIGATIE -->
+<!-- ========================= -->
+<nav class="navbar">
+    <div class="logo">
+        <div class="logo-icon">
+<img src="Assets/images/logo.png" alt="VeloQuest">
+</div>
+</div>
+        <div>
+            <h2>VELOQUEST</h2>
+            <span>Iedere rit vergroot jouw wereld.</span>
+        </div>
+    </div>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#wereld">Jouw Wereld</a></li>
+        <li><a href="#journaal">Journaal</a></li>
+        <li><a href="#planner">Routeplanner</a></li>
+    </ul>
+</nav>
+<!-- ========================= -->
+<!-- HERO -->
+<!-- ========================= -->
+<header class="hero">
+    <video class="hero-video" autoplay muted loop playsinline>
+        <source src="Assets/Videos/hero.mp4" type="video/mp4">
+    </video>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <p class="eyebrow">
+            DE WEG WACHT OP JE
+        </p>
+        <h1>
+            Er zijn nog duizenden<br>
+            wegen die jij nooit<br>
+            hebt ontdekt.
+        </h1>
+        <p class="hero-text">
+            Niet iedere rit hoeft sneller.
+            Niet iedere rit hoeft langer.
+            Soms begint het mooiste avontuur
+            gewoon wanneer je de voordeur achter je dichttrekt.
+        </p>
+        <div class="hero-buttons">
+            <a href="#wereld" class="button-primary">
+                Ik ga fietsen
+            </a>
+            <a href="#planner" class="button-secondary">
+                Plan een route
+            </a>
+        </div>
+    </div>
+    <div class="scroll-indicator">
+        ↓ Scroll
+    </div>
+</header>
+<!-- ========================= -->
+<!-- JOUW WERELD -->
+<!-- ========================= -->
+<section class="wereld" id="wereld">
+    <div class="section-title">
+        <span>
+            JOUW WERELD
+        </span>
+        <h2>
+            Niet hoeveel je fietst.
+            Maar hoeveel je ontdekt.
+        </h2>
+        <p>
+            Uiteindelijk worden hier automatisch jouw Strava-ritten ingelezen.
+            Iedere weg die je rijdt kleurt koper.
+            Zo zie je jouw eigen wielerwereld steeds groter worden.
+        </p>
+    </div>
+    <div class="wereld-kaart">
+
+<div id="map"></div>
+
+</div>
+</section>
+<!-- ========================= -->
+<!-- JOUW RITTENJOURNAAL -->
+<!-- ========================= -->
+<section class="journaal" id="journaal">
+    <div class="section-title">
+        <span>JOURNAAL</span>
+        <h2>
+            Niet iedere rit is bijzonder.
+            Sommige veranderen je.
+        </h2>
+        <p>
+            Hier komen straks automatisch je Strava-ritten te staan.
+            Niet als een saaie lijst,
+            maar als herinneringen aan avonturen.
+        </p>
+    </div>
+    <div class="journey-grid">
+        <article class="journey-card">
+            <span class="journey-icon">☀️</span>
+            <h3>Ochtendmist langs de Lek</h3>
+            <p>
+                78 kilometer.
+                Rustige wegen.
+                Een zonsopkomst die je niet snel vergeet.
+            </p>
+        </article>
+        <article class="journey-card">
+            <span class="journey-icon">🌳</span>
+            <h3>Nieuwe wegen ontdekt</h3>
+            <p>
+                Vandaag heb je
+                17 wegen gefietst
+                waar je nog nooit eerder bent geweest.
+            </p>
+        </article>
+        <article class="journey-card">
+            <span class="journey-icon">☕</span>
+            <h3>Koffiestop</h3>
+            <p>
+                Nieuwe favoriete koffiezaak gevonden.
+                Dit soort plekken wil je onthouden.
+            </p>
+        </article>
+    </div>
+</section>
+<!-- ========================= -->
+<!-- AI ROUTEPLANNER -->
+<!-- ========================= -->
+<section class="planner" id="planner">
+    <div class="section-title">
+        <span>ROUTECOACH</span>
+        <h2>
+            Waar heb je vandaag zin in?
+        </h2>
+        <p>
+            Uiteindelijk stelt VeloQuest op basis van jouw Strava-gegevens
+            automatisch een route voor.
+        </p>
+    </div>
+    <div class="planner-grid">
+        <div class="planner-item">
+            🌅
+            <h3>Zonsopkomst</h3>
+            <p>Vertrek vroeg en zie de wereld ontwaken.</p>
+        </div>
+        <div class="planner-item">
+            🌍
+            <h3>Nieuwe wegen</h3>
+            <p>Ontdek wegen waar je nog nooit hebt gefietst.</p>
+        </div>
+        <div class="planner-item">
+            ☕
+            <h3>Koffierit</h3>
+            <p>Plan een route langs goede koffiebars.</p>
+        </div>
+        <div class="planner-item">
+            ⛰️
+            <h3>Hoogtemeters</h3>
+            <p>Zoek de mooiste klimmetjes in de buurt.</p>
+        </div>
+        <div class="planner-item">
+            🌳
+            <h3>Rustige wegen</h3>
+            <p>Zo min mogelijk verkeer, zo veel mogelijk natuur.</p>
+        </div>
+        <div class="planner-item">
+            💨
+            <h3>Vermijd wind</h3>
+            <p>Later koppelen we dit aan de actuele windrichting.</p>
+        </div>
+    </div>
+</section>
+<!-- ========================= -->
+<!-- DISCOVERY CHAPTERS -->
+<!-- ========================= -->
+<section class="chapters">
+    <div class="section-title">
+        <span>HOOFDSTUKKEN</span>
+        <h2>
+            Iedere ontdekking schrijft een nieuw hoofdstuk.
+        </h2>
+    </div>
+    <div class="chapter-grid">
+        <div class="chapter">
+            <span>HOOFDSTUK I</span>
+            <h3>Eerste 100 unieke wegen</h3>
+        </div>
+        <div class="chapter">
+            <span>HOOFDSTUK II</span>
+            <h3>De eerste klim</h3>
+        </div>
+        <div class="chapter">
+            <span>HOOFDSTUK III</span>
+            <h3>Eerste rit buiten Nederland</h3>
+        </div>
+    </div>
+</section>
+<!-- ========================= -->
+<!-- TOEKOMST -->
+<!-- ========================= -->
+<section class="future">
+    <div class="section-title">
+        <span>WAT KOMT ERAAN</span>
+        <h2>
+            VeloQuest groeit met iedere update.
+        </h2>
+        <p>
+            Dit is nog maar het begin. Uiteindelijk wordt VeloQuest jouw persoonlijke
+            wielerplatform waarin iedere rit automatisch wordt verwerkt.
+        </p>
+    </div>
+    <div class="future-grid">
+        <div class="future-card">
+            <h3>🟢 Strava koppeling</h3>
+            <p>Automatisch synchroniseren van al je ritten.</p>
+        </div>
+        <div class="future-card">
+            <h3>🗺️ Ontdekte wegen</h3>
+            <p>Alle gefietste wegen worden zichtbaar op jouw kaart.</p>
+        </div>
+        <div class="future-card">
+            <h3>🤖 AI Routecoach</h3>
+            <p>Nieuwe routes op basis van jouw voorkeuren.</p>
+        </div>
+        <div class="future-card">
+            <h3>☕ Koffiestops</h3>
+            <p>De mooiste cafés onderweg verzamelen.</p>
+        </div>
+    </div>
+</section>
+<!-- ========================= -->
+<!-- SLOTQUOTE -->
+<!-- ========================= -->
+<section class="quote">
+    <blockquote>
+        "Niet iedere rit verandert je benen.
+        De mooiste ritten veranderen je wereld."
+    </blockquote>
+</section>
+<!-- ========================= -->
+<!-- FOOTER -->
+<!-- ========================= -->
+<footer>
+    <div class="footer-logo">
+        <div class="logo-icon">
+            VQ
+        </div>
+        <div>
+            <h2>VELOQUEST</h2>
+            <span>Iedere rit vergroot jouw wereld.</span>
+        </div>
+    </div>
+    <p>
+        © 2026 VeloQuest • Gebouwd door Raymon Koole
+    </p>
+</footer>
+<!-- ========================= -->
+<!-- ZWEVENDE ROUTECOACH -->
+<!-- ========================= -->
+<button class="routecoach">
+    🚴 Routecoach
+</button>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

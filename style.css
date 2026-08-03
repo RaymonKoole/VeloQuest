@@ -1,0 +1,1020 @@
+/* =========================================
+   VELOQUEST V2
+   Premium Cycling Experience
+========================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Manrope',sans-serif;
+
+    background:#060708;
+
+    color:#ffffff;
+
+    overflow-x:hidden;
+
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#111;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#9d6a32;
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#c68a46;
+
+}
+
+/* =========================================
+NAVBAR
+========================================= */
+
+.navbar{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    padding:25px 8%;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    z-index:1000;
+
+    background:rgba(6,7,8,.45);
+
+    backdrop-filter:blur(18px);
+
+    border-bottom:1px solid rgba(255,255,255,.05);
+
+}
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+}
+
+.logo-icon{
+
+    width:70px;
+
+    height:70px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.logo-icon img{
+
+    width:70px;
+
+    height:70px;
+
+    object-fit:contain;
+
+    filter:drop-shadow(0 0 18px rgba(213,154,87,.35));
+
+}
+
+.logo h2{
+
+    font-size:24px;
+
+    letter-spacing:4px;
+
+}
+
+.logo span{
+
+    color:#999;
+
+    font-size:13px;
+
+}
+
+.navbar ul{
+
+    display:flex;
+
+    gap:40px;
+
+    list-style:none;
+
+}
+
+.navbar a{
+
+    text-decoration:none;
+
+    color:white;
+
+    transition:.35s;
+
+    font-weight:600;
+
+}
+
+.navbar a:hover{
+
+    color:#d59a57;
+
+}
+
+/* =========================================
+HERO
+========================================= */
+
+.hero{
+
+    position:relative;
+
+    height:100vh;
+
+    display:flex;
+
+    align-items:center;
+
+    padding:0 10%;
+
+    overflow:hidden;
+
+}
+.hero video{
+
+    position:absolute;
+
+    inset:0;
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    z-index:-2;
+
+}
+
+.hero-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+
+        rgba(5,5,5,.45),
+
+        rgba(5,5,5,.82)
+
+    );
+
+}
+
+.hero-content{
+
+    position:relative;
+
+    z-index:5;
+
+    max-width:760px;
+
+}
+
+.eyebrow{
+
+    color:#d59a57;
+
+    letter-spacing:6px;
+
+    font-size:14px;
+
+    margin-bottom:25px;
+
+}
+
+.hero h1{
+
+    font-size:72px;
+
+    line-height:1.05;
+
+    margin-bottom:35px;
+
+    font-weight:800;
+
+}
+
+.hero-text{
+
+    color:#d0d0d0;
+
+    font-size:22px;
+
+    line-height:1.8;
+
+    max-width:650px;
+
+}
+/* =========================================
+BUTTONS
+========================================= */
+
+.hero-buttons{
+
+    display:flex;
+
+    gap:20px;
+
+    margin-top:50px;
+
+    flex-wrap:wrap;
+
+}
+
+.button-primary{
+
+    display:inline-block;
+
+    padding:18px 36px;
+
+    border-radius:50px;
+
+    text-decoration:none;
+
+    background:linear-gradient(135deg,#9d6a32,#d59a57);
+
+    color:white;
+
+    font-weight:700;
+
+    transition:.35s;
+
+    box-shadow:0 12px 40px rgba(213,154,87,.35);
+
+}
+
+.button-primary:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 20px 60px rgba(213,154,87,.45);
+
+}
+
+.button-secondary{
+
+    display:inline-block;
+
+    padding:18px 36px;
+
+    border-radius:50px;
+
+    text-decoration:none;
+
+    color:white;
+
+    border:1px solid rgba(255,255,255,.2);
+
+    backdrop-filter:blur(15px);
+
+    transition:.35s;
+
+}
+
+.button-secondary:hover{
+
+    background:rgba(255,255,255,.08);
+
+}
+
+/* =========================================
+SCROLL INDICATOR
+========================================= */
+
+.scroll-indicator{
+
+    position:absolute;
+
+    bottom:40px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    color:#d0d0d0;
+
+    font-size:14px;
+
+    letter-spacing:4px;
+
+    animation:bounce 2s infinite;
+
+    z-index:5;
+
+}
+
+@keyframes bounce{
+
+    0%,100%{
+
+        transform:translate(-50%,0);
+
+    }
+
+    50%{
+
+        transform:translate(-50%,10px);
+
+    }
+
+}
+
+/* =========================================
+ALGEMENE SECTIES
+========================================= */
+
+section{
+
+    padding:120px 10%;
+
+}
+
+.section-title{
+
+    max-width:760px;
+
+    margin:0 auto 70px;
+
+    text-align:center;
+
+}
+
+.section-title span{
+
+    color:#d59a57;
+
+    letter-spacing:5px;
+
+    font-size:14px;
+
+}
+
+.section-title h2{
+
+    font-size:52px;
+
+    margin:20px 0;
+
+    line-height:1.2;
+
+}
+
+.section-title p{
+
+    color:#a5a5a5;
+
+    line-height:1.9;
+
+    font-size:19px;
+
+}
+
+/* =========================================
+JOUW WERELD
+========================================= */
+
+.wereld{
+
+    background:#090b0d;
+
+}
+
+.wereld-kaart{
+
+    display:flex;
+
+    justify-content:center;
+
+}
+#map{
+
+    width:100%;
+
+    max-width:1300px;
+
+    height:650px;
+
+    border-radius:30px;
+
+    overflow:hidden;
+
+    box-shadow:0 30px 80px rgba(0,0,0,.45);
+
+}
+
+.kaart-placeholder{
+
+    width:100%;
+
+    max-width:1200px;
+
+    height:600px;
+
+    border-radius:30px;
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:
+    radial-gradient(circle at top,#1d2732,#0d1117);
+
+    border:1px solid rgba(255,255,255,.05);
+
+    box-shadow:0 30px 90px rgba(0,0,0,.5);
+
+}
+
+/* raster op de kaart */
+
+.kaart-placeholder::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background-image:
+
+    linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),
+
+    linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);
+
+    background-size:40px 40px;
+
+}
+
+.kaart-info{
+
+    position:absolute;
+
+    top:40px;
+
+    left:40px;
+
+    width:320px;
+
+    padding:35px;
+
+    border-radius:24px;
+
+    background:rgba(255,255,255,.05);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+}
+
+.kaart-info h3{
+
+    color:#d59a57;
+
+    margin-bottom:15px;
+
+}
+
+.kaart-info h1{
+
+    font-size:70px;
+
+    margin-bottom:15px;
+
+}
+
+.kaart-info p{
+
+    color:#d0d0d0;
+
+    line-height:1.8;
+
+}
+
+/* =========================================
+GLASS CARDS
+========================================= */
+
+.journey-card,
+.planner-item,
+.chapter,
+.future-card{
+
+    background:rgba(255,255,255,.04);
+
+    border:1px solid rgba(255,255,255,.06);
+
+    border-radius:25px;
+
+    padding:35px;
+
+    transition:.4s;
+
+    backdrop-filter:blur(18px);
+
+}
+
+.journey-card:hover,
+.planner-item:hover,
+.chapter:hover,
+.future-card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:#d59a57;
+
+    box-shadow:0 20px 60px rgba(213,154,87,.18);
+
+}
+/* =========================================
+JOURNEY GRID
+========================================= */
+
+.journey-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+    gap:35px;
+
+}
+
+.journey-icon{
+
+    font-size:40px;
+
+    display:block;
+
+    margin-bottom:20px;
+
+}
+
+.journey-card h3{
+
+    font-size:28px;
+
+    margin-bottom:20px;
+
+}
+
+.journey-card p{
+
+    color:#bfbfbf;
+
+    line-height:1.8;
+
+}
+
+/* =========================================
+PLANNER
+========================================= */
+
+.planner-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    gap:30px;
+
+}
+
+.planner-item{
+
+    text-align:center;
+
+}
+
+.planner-item{
+
+    font-size:22px;
+
+}
+
+.planner-item h3{
+
+    margin:20px 0;
+
+    font-size:24px;
+
+}
+
+.planner-item p{
+
+    color:#bdbdbd;
+
+    line-height:1.7;
+
+}
+
+/* =========================================
+CHAPTERS
+========================================= */
+
+.chapter-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:30px;
+
+}
+
+.chapter span{
+
+    color:#d59a57;
+
+    letter-spacing:3px;
+
+    font-size:13px;
+
+}
+
+.chapter h3{
+
+    margin-top:20px;
+
+    font-size:28px;
+
+}
+
+/* =========================================
+FUTURE
+========================================= */
+
+.future-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:30px;
+
+}
+
+.future-card h3{
+
+    margin-bottom:20px;
+
+}
+
+.future-card p{
+
+    color:#c4c4c4;
+
+    line-height:1.8;
+
+}
+
+/* =========================================
+QUOTE
+========================================= */
+
+.quote{
+
+    text-align:center;
+
+    padding:160px 12%;
+
+}
+
+.quote blockquote{
+
+    max-width:900px;
+
+    margin:auto;
+
+    font-size:46px;
+
+    line-height:1.4;
+
+    font-weight:700;
+
+    color:white;
+
+}
+
+/* =========================================
+FOOTER
+========================================= */
+
+footer{
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+    padding:80px 10%;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:30px;
+
+}
+
+.footer-logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+}
+
+footer p{
+
+    color:#8f8f8f;
+
+}
+
+/* =========================================
+ROUTECOACH BUTTON
+========================================= */
+
+.routecoach{
+
+    position:fixed;
+
+    right:35px;
+
+    bottom:35px;
+
+    border:none;
+
+    border-radius:999px;
+
+    padding:18px 28px;
+
+    background:linear-gradient(135deg,#9d6a32,#d59a57);
+
+    color:white;
+
+    font-size:16px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    box-shadow:0 20px 60px rgba(213,154,87,.35);
+
+    transition:.35s;
+
+    z-index:999;
+
+}
+
+.routecoach:hover{
+
+    transform:translateY(-5px) scale(1.05);
+
+}
+
+/* =========================================
+ANIMATIES
+========================================= */
+
+.hero-content{
+
+    animation:fadeUp 1.2s ease;
+
+}
+
+.section-title{
+
+    animation:fadeUp 1.2s ease;
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* =========================================
+RESPONSIVE
+========================================= */
+
+@media(max-width:1000px){
+
+    .hero h1{
+
+        font-size:54px;
+
+    }
+
+    .section-title h2{
+
+        font-size:40px;
+
+    }
+
+    .kaart-info{
+
+        width:260px;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .navbar{
+
+        padding:20px;
+
+        flex-direction:column;
+
+        gap:20px;
+
+    }
+
+    .navbar ul{
+
+        gap:18px;
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+
+    }
+
+    .hero{
+
+        padding:0 8%;
+
+    }
+
+    .hero h1{
+
+        font-size:42px;
+
+    }
+
+    .hero-text{
+
+        font-size:18px;
+
+    }
+
+    .hero-buttons{
+
+        flex-direction:column;
+
+    }
+
+    .button-primary,
+    .button-secondary{
+
+        text-align:center;
+
+        width:100%;
+
+    }
+
+    .kaart-placeholder{
+
+        height:420px;
+
+    }
+
+    .kaart-info{
+
+        position:relative;
+
+        top:25px;
+
+        left:25px;
+
+        width:220px;
+
+        padding:25px;
+
+    }
+
+    .quote blockquote{
+
+        font-size:30px;
+
+    }
+
+    footer{
+
+        text-align:center;
+
+        justify-content:center;
+
+    }
+
+}
+/* =========================================
+HERO VIDEO
+========================================= */
+
+.hero-video{
+
+    position:absolute;
+
+    inset:0;
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    z-index:-2;
+
+}
+
+.hero-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+        rgba(0,0,0,.35),
+        rgba(0,0,0,.80)
+    );
+
+    z-index:-1;
+
+}
